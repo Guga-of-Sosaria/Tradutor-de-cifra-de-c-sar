@@ -32,8 +32,8 @@ print("|||TRADUTOR E DECODIFICADOR DE CIFRA DE CÉSAR|||", end="\n\n")
 while True:
     print("Bem vindo! Por favor, Escolha uma opreação:")
     print("1) Codificar\n2) Decodificar")
-    opcao = int(input())
-    if opcao == 1:
+    opcao = input()
+    if opcao == "1":
         #Codifica a palavra
         codigo = []
         palavra = input("Digite algo para codificar: ")
@@ -45,7 +45,7 @@ while True:
         for i in codigo:
             print(i, end="")
         print("\n")
-    elif opcao == 2:
+    elif opcao == "2":
         #Traduz o código
         traducao = []
         codigo = input("Digite o codigo a ser decodificado: ")
@@ -57,6 +57,9 @@ while True:
         for i in traducao:
             print(i, end="")
         print("\n")
+    else:
+        os.system('cls')
+        continue
     continuar = input("Aperte 1 para realizar outra operação ou aperte qualquer outra tecla para fechar o programa: ")
     if continuar == "1":
         os.system('cls')
